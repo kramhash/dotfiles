@@ -20,15 +20,6 @@ alias treport="/usr/local/opt/tsung/lib/tsung/bin/tsung_stats.pl; chrome report.
 export EDITOR=subl
 eval "$(direnv hook bash)"
 
-# if [ -d "${PYENV_ROOT}" ]; then
-#     export PATH=${PYENV_ROOT}/bin:$PATH
-#     eval "$(pyenv init -)"
-#     eval "$(pyenv virtualenv-init -)"
-# fi
-
-# export PLENV_ROOT=$HOME/.plenv
-# export PATH=$PLENV_ROOT/bin:$PATH
-# eval "$(plenv init -)"
 
 
 if [ -d $HOME/.anyenv ] ; then
@@ -42,7 +33,7 @@ if [ -d $HOME/.anyenv ] ; then
 fi
 
 
-[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
+#[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
 
 # Setting PATH for Python 3.5
 # The orginal version is saved in .bash_profile.pysave
