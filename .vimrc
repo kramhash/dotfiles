@@ -10,24 +10,44 @@ map k gk
 
 inoremap jk <ESC>
 
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
+"dein Scripts-----------------------------
+if &compatible
+  set nocompatible
+endif
 
-call plug#begin('~/.vim/plugged')
+" Required:
+set runtimepath+=~/.vim/bundles/repos/github.com/Shougo/dein.vim
 
-Plug 'editorconfig/editorconfig-vim'
+" Required:
+if dein#load_state('~/.vim/bundles')
+  call dein#begin('~/.vim/bundles')
 
-Plug 'othree/yajs.vim'
+  " Let dein manage dein
+  " Required:
+  call dein#add('~/.vim/bundles/repos/github.com/Shougo/dein.vim')
 
-Plug 'dracula/vim'
+  " Add or remove your plugins here:
 
-call plug#end()
+  call dein#add('editorconfig/editorconfig-vim')
+  call dein#add('othree/yajs.vim')
+  call dein#add('dracula/vim')
 
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
-
+" Required:
 filetype plugin indent on
 
 
-colorscheme dracula
+" If you want to install not installed plugins on startup.
+"if dein#check_install()
+"  call dein#install()
+"endif
 
+"End dein Scripts-------------------------
+
+
+
+colorscheme dracula

@@ -5,6 +5,8 @@ export PATH=$HOME/works/flex/bin:$HOME/bin:$HOME/usr/local/sbin:$PATH:$ANDROID_H
 # eval "$(rbenv init -)"
 
 export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+# export GOROOT_BOOTSTRAP=$HOME/.anyenv/envs/goenv/versions/1.4
 
 export CLICOLOR=1
 
@@ -16,6 +18,8 @@ export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
 alias tsung_stats="/usr/local/opt/tsung/lib/tsung/bin/tsung_stats.pl"
 alias chrome="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
 alias treport="/usr/local/opt/tsung/lib/tsung/bin/tsung_stats.pl; chrome report.html"
+alias mongostart="sudo mongod --fork --dbpath /var/lib/mongodb --logpath /var/log/mongodb.log"
+alias dstat_full="dstat -Tclmdrn"
 
 export EDITOR=subl
 eval "$(direnv hook bash)"
@@ -31,7 +35,7 @@ if [ -d $HOME/.anyenv ] ; then
 		export PATH="$HOME/.anyenv/envs/$D/shims:$PATH"
 	done
 fi
-
+eval "$(pyenv virtualenv-init -)"
 
 #[ -s "/Users/mark/.dnx/dnvm/dnvm.sh" ] && . "/Users/mark/.dnx/dnvm/dnvm.sh" # Load dnvm
 
@@ -39,3 +43,17 @@ fi
 # The orginal version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 export PATH
+
+test -e "${HOME}/.iterm2_shell_integration.bash" && source "${HOME}/.iterm2_shell_integration.bash"
+
+
+alias findrealm="find ~/Library/Developer/CoreSimulator/Devices/$(ls -t1 ~/Library/Developer/CoreSimulator/Devices/ | head -1)/data/Containers/Data/Application/ -name \*.realm	"
+export PATH="/usr/local/opt/tomcat@8.0/bin:$PATH"
+
+
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+	. `brew --prefix`/etc/bash_completion
+fi
