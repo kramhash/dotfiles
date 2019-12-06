@@ -4,6 +4,10 @@ export PATH=$HOME/works/flex/bin:$HOME/bin:$HOME/usr/local/sbin:$PATH:$ANDROID_H
 
 # eval "$(rbenv init -)"
 
+
+export LDFLAGS="-L/usr/local/opt/zlib/lib"
+export CPPFLAGS="-I/usr/local/opt/zlib/include"
+
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 # export GOROOT_BOOTSTRAP=$HOME/.anyenv/envs/goenv/versions/1.4
