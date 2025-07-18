@@ -1,0 +1,14 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+command_timeout = 2000
+
+[character]
+success_symbol = "[>](bold green) "
+
+[directory]
+truncation_length = 10
+truncate_to_repo = false
+
+[time]
+disabled = false
